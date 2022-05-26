@@ -6,6 +6,7 @@ public class forLoop {
         int target = 5;
 
         System.out.println(Arrays.toString(twoSum(x, target)));
+        //^^^^ Prints out [1, 2]
     }
 
     private static int[] twoSum(int[] nums, int target) {
