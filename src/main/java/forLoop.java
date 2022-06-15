@@ -8,9 +8,12 @@ public class forLoop {
 //        System.out.println(Arrays.toString(twoSum(x, target)));
         //^^^^ Prints out [1, 2]
 
-        int[] x = {1, 1, 1, 1, 1};
-        System.out.println(Arrays.toString(runningSum(x)));
+//        int[] x = {1, 1, 1, 1, 1};
+//        System.out.println(Arrays.toString(runningSum(x)));
         //^^^^^ Prints out [1, 2, 3, 4, 5]
+
+        System.out.println(isPalindrome(121)); // prints true
+        System.out.println(isPalindrome(1234)); // prints false
 
     }
 
@@ -50,6 +53,20 @@ public class forLoop {
             }
         }
         return returnArray;
+    }
+
+    //    Given an integer x, return true if x is palindrome integer.
+//    i.e. return true for 121
+    public static boolean isPalindrome(int x) {
+        int input = x;
+        int reversedNum = 0;
+
+        while (x > 0) {
+            int lastNumber = x % 10;  // this returns the final number of the int
+            reversedNum = (reversedNum * 10) + lastNumber; // this adds a 0 to the end of reversedNum, then adds lastNum
+            x = x / 10; // removes final number in original int, and shunts everything to the right one place.
+        }
+        return reversedNum == input;
     }
 
 }
